@@ -11,7 +11,7 @@ const fetchAuth = async () => {
       // headers: {
       //    "Content-Type": "application/json",
       // },
-      // credentials: "include",
+      credentials: "include",
    })
       .then((res) => {
          switch (res.status) {
