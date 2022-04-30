@@ -53,7 +53,7 @@ const AdminLayout = () => {
       await delay()
 
       // Fetch API POST user logout
-      await fetch("http://localhost:3333/api/user/logout", {
+      await fetch("https://no-lashes19940827.herokuapp.com/api/user/logout", {
          method: "POST",
          credentials: "include",
       })
