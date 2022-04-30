@@ -8,11 +8,10 @@ const fetchAuth = async () => {
    // Fetch API GET user authentication data
    const results = await fetch("https://no-lashes19940827.herokuapp.com/api/user/auth", {
       method: "GET",
-      mode: "cors",
-      headers: {
-         "Content-Type": "application/json",
-      },
-      credentials: "include",
+      // headers: {
+      //    "Content-Type": "application/json",
+      // },
+      // credentials: "include",
    })
       .then((res) => {
          switch (res.status) {
