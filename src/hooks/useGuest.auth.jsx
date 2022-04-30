@@ -6,7 +6,7 @@ const fetchAuth = async () => {
    await delay()
 
    // Fetch API GET user authentication data
-   const results = await fetch("https://no-lashes19940827.herokuapp.com/api/user/auth", {
+   const results = await fetch("https://server-lashes19940827.herokuapp.com/api/user/auth", {
       method: "GET",
       headers: {
          "Content-Type": "application/json",
