@@ -2,27 +2,54 @@ import { useMutation, useQueryClient } from "react-query"
 import { useNavigate } from "react-router-dom"
 
 const deleteSchedule = async (availability) => {
-    const id = availability.availabilityID
+   // Delaying function
+   const delay = (ms = 1010) => new Promise((r) => setTimeout(r, ms))
+   await delay()
 
-    await fetch(`http://0.0.0.0:3333/api/availability/${id}`, {
-        method: 'DELETE',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(availability)
-    }).then(res => {
-        alert('Deleted Schedule Successfully!', res)
-    }).catch(err => console.log(err))
+   const id = availability.availabilityID
+
+   // Fetch API DELETE availability by ID
+   await fetch(`http://localhost:3333/api/availability/${id}`, {
+      method: "DELETE",
+      headers: {
+         "Content-Type": "application/json",
+      },
+      credentials: "include",
+      body: JSON.stringify(availability),
+   })
+      .then((res) => {
+         switch (res.status) {
+            case 200:
+               // Display successful alert message
+               document.getElementById("schedule-delete-success").style.display = "flex"
+               return
+            case 400:
+               throw new Error("400 Status Code")
+            case 401:
+               throw new Error("401 Status Code")
+            case 429:
+               throw new Error("429 Status Code")
+            case 500:
+               throw new Error("500 Status Code")
+         }
+      })
+      .catch((err) => {
+         // Handling error display alert
+         document.getElementById("schedule-delete-error").style.display = "flex"
+         document.getElementById("schedule-delete-error-message").innerHTML = err
+         console.log(err)
+      })
 }
 
 export const useDeleteSchedule = () => {
-    const queryClient = useQueryClient()
-    const navigate = useNavigate()
+   const queryClient = useQueryClient()
+   const navigate = useNavigate()
 
-    return useMutation(deleteSchedule, {
-        onSuccess: () => {
-            queryClient.invalidateQueries('schedule-all')
-            navigate('/schedule-view')
-        }
-    })
+   return useMutation("schedule-delete", deleteSchedule, {
+      refetchOnWindowFocus: false,
+      onSuccess: () => {
+         queryClient.invalidateQueries("schedule-all")
+         setTimeout(() => navigate("/schedule/view"), 2500) // Delay response on successful implementation
+      },
+   })
 }
