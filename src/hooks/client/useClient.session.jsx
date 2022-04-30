@@ -6,7 +6,7 @@ const fetchSession = async () => {
    await delay()
 
    // Fetch API GET user client data
-   const results = await fetch("https://no-lashes19940827.com/api/user/client", {
+   const results = await fetch("https://no-lashes19940827.herokuapp.com/api/user/client", {
       method: "GET",
       headers: {
          "Content-Type": "application/json",
