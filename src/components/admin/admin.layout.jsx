@@ -61,7 +61,7 @@ const AdminLayout = () => {
             if (res.status === 200) {
                // Handling the successful logut & refirect
                console.log("Logged out successfully!")
-               window.location.href = "https://lashing19940827.herokuapp.com"
+               window.location.href = "https://lashes19940827.herokuapp.com"
             } else {
                console.log("Error Logging out!")
             }

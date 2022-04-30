@@ -32,7 +32,7 @@ const loginGuest = async (guest) => {
          // If statement to handle json message and redirect
          if (json) {
             alert(json.message)
-            window.location.href = "https://lashing19940827.herokuapp.com/"
+            window.location.href = "https://lashes19940827.herokuapp.com/"
          }
       })
       .catch((err) => alert(err))
