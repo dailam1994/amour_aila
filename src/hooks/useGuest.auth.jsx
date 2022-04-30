@@ -10,6 +10,7 @@ const fetchAuth = async () => {
       method: "GET",
       headers: {
          "Content-Type": "application/json",
+         "Access-Control-Max-Age": 600,
       },
       credentials: "include",
    })
