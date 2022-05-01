@@ -7,7 +7,7 @@ const addBooking = async (booking) => {
    await delay()
 
    // Fetch API POST booking data
-   await fetch("http://localhost:3333/api/booking", {
+   await fetch("https://server-lashes19940827.herokuapp.com/api/booking", {
       method: "POST",
       headers: {
          "Content-Type": "application/json",

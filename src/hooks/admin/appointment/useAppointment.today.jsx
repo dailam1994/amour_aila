@@ -6,7 +6,7 @@ const fetchAppointmentToday = async () => {
    await delay()
 
    // Fetch API GET for today appointments
-   const results = await fetch(`http://localhost:3333/api/appointment/today`, {
+   const results = await fetch(`https://server-lashes19940827.herokuapp.com/api/appointment/today`, {
       method: "GET",
       headers: {
          "Content-Type": "application/json",

@@ -9,7 +9,7 @@ const deleteSchedule = async (availability) => {
    const id = availability.availabilityID
 
    // Fetch API DELETE availability by ID
-   await fetch(`http://localhost:3333/api/availability/${id}`, {
+   await fetch(`https://server-lashes19940827.herokuapp.com/api/availability/${id}`, {
       method: "DELETE",
       headers: {
          "Content-Type": "application/json",
