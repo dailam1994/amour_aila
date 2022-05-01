@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 
 const addBooking = async (booking) => {
    // Delaying function
-   const delay = (ms = 3030) => new Promise((r) => setTimeout(r, ms))
+   const delay = (ms = 3300) => new Promise((r) => setTimeout(r, ms))
    await delay()
 
    // Fetch API POST booking data

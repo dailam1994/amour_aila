@@ -2,7 +2,7 @@ import { useQuery } from "react-query"
 
 const fetchScheduleDate = async ({ queryKey }) => {
    // Delaying function
-   const delay = (ms = 4040) => new Promise((r) => setTimeout(r, ms))
+   const delay = (ms = 4400) => new Promise((r) => setTimeout(r, ms))
    await delay()
 
    const date = queryKey[1]

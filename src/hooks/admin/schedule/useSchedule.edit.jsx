@@ -2,7 +2,7 @@ import { useMutation, useQueryClient } from "react-query"
 
 const editSchedule = async (availability) => {
    // Delaying function
-   const delay = (ms = 2020) => new Promise((r) => setTimeout(r, ms))
+   const delay = (ms = 2200) => new Promise((r) => setTimeout(r, ms))
    await delay()
 
    const id = availability.availabilityID

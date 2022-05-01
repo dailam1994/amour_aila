@@ -2,7 +2,7 @@ import { useMutation } from "react-query"
 
 const loginGuest = async (guest) => {
    // Delaying function
-   const delay = (ms = 1010) => new Promise((r) => setTimeout(r, ms))
+   const delay = (ms = 1100) => new Promise((r) => setTimeout(r, ms))
    await delay()
 
    // Fetch API POST User Login Data

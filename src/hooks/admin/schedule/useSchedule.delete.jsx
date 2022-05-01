@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 
 const deleteSchedule = async (availability) => {
    // Delaying function
-   const delay = (ms = 1010) => new Promise((r) => setTimeout(r, ms))
+   const delay = (ms = 1100) => new Promise((r) => setTimeout(r, ms))
    await delay()
 
    const id = availability.availabilityID

@@ -2,7 +2,7 @@ import { useQuery } from "react-query"
 
 const fetchSession = async () => {
    // Delaying function
-   const delay = (ms = 1010) => new Promise((r) => setTimeout(r, ms))
+   const delay = (ms = 1100) => new Promise((r) => setTimeout(r, ms))
    await delay()
 
    // Fetch API GET user client data

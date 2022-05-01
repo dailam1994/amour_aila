@@ -2,11 +2,11 @@ import { useQuery } from "react-query"
 
 const fetchAppointmentHistory = async () => {
    // Delaying function
-   const delay = (ms = 4040) => new Promise((r) => setTimeout(r, ms))
+   const delay = (ms = 4400) => new Promise((r) => setTimeout(r, ms))
    await delay()
 
    // Fetch API GET for history appointments
-   const results = await fetch(`hhttps://server-lashes19940827.herokuapp.com/api/appointment/history`, {
+   const results = await fetch(`https://server-lashes19940827.herokuapp.com/api/appointment/history`, {
       method: "GET",
       headers: {
          "Content-Type": "application/json",

@@ -2,7 +2,7 @@ import { useQuery } from "react-query"
 
 const fetchAppointmentUpcoming = async () => {
    // Delaying function
-   const delay = (ms = 3030) => new Promise((r) => setTimeout(r, ms))
+   const delay = (ms = 3300) => new Promise((r) => setTimeout(r, ms))
    await delay()
 
    // Fetch API GET for upcoming appointments

@@ -2,7 +2,7 @@ import { useMutation, useQueryClient } from "react-query"
 
 const editUser = async (user) => {
    // Delaying function
-   const delay = (ms = 3030) => new Promise((r) => setTimeout(r, ms))
+   const delay = (ms = 3300) => new Promise((r) => setTimeout(r, ms))
    await delay()
 
    const id = user.userID

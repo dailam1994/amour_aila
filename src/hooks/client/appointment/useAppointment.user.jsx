@@ -2,7 +2,7 @@ import { useQuery } from "react-query"
 
 const fetchAppointmentUser = async ({ queryKey }) => {
    // Delaying function
-   const delay = (ms = 2020) => new Promise((r) => setTimeout(r, ms))
+   const delay = (ms = 2200) => new Promise((r) => setTimeout(r, ms))
    await delay()
 
    const id = queryKey[1]
