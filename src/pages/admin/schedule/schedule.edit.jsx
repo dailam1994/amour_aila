@@ -65,8 +65,8 @@ const ScheduleEdit = () => {
       formState: { errors },
    } = useForm()
 
-   console.log(1, startTime)
-   console.log(3, endTime)
+   console.log(1, new Date(startTime).toLocaleTimeString())
+   console.log(3, new Date(endTime).toLocaleTimeString())
 
    const { mutate } = useEditSchedule()
 
