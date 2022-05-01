@@ -12,8 +12,6 @@ const AuthRoute = () => {
    const { isLoading, isFetching, data } = useAuthData()
    let user
 
-   console.log(data)
-
    // If statement to handle existing Authentication data
    if (data) {
       user = { loggedIn: data.authenticated }
