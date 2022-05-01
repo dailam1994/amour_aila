@@ -53,9 +53,6 @@ const ScheduleEdit = () => {
          setDate(new Date(data.date).toDateString())
          setStartTime(data.startTime)
          setEndTime(data.endTime)
-
-         console.log(2, data.startTime)
-         console.log(4, data.endTime)
       }
    }, [data])
 
@@ -64,9 +61,6 @@ const ScheduleEdit = () => {
       handleSubmit,
       formState: { errors },
    } = useForm()
-
-   console.log(1, new Date(startTime).toLocaleTimeString())
-   console.log(3, new Date(endTime).toLocaleTimeString())
 
    const { mutate } = useEditSchedule()
 
