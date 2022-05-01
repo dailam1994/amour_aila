@@ -53,6 +53,11 @@ const ScheduleEdit = () => {
          setDate(new Date(data.date).toDateString())
          setStartTime(data.startTime)
          setEndTime(data.endTime)
+
+         console.log(1, startTime)
+         console.log(2, data.startTime)
+         console.log(3, endTime)
+         console.log(4, data.endTime)
       }
    }, [data])
 
