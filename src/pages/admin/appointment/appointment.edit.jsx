@@ -143,6 +143,9 @@ const AppointmentEdit = () => {
       adminNewStartTime = new Date(adminFormatStartTime).toLocaleString().substring(12, 17)
    }
 
+   console.log(adminStartTime)
+   console.log(adminEndTime)
+
    // Submit Functionality
    const onSubmit = (formData) => {
       // Reset alert displays
