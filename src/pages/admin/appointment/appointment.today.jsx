@@ -16,6 +16,7 @@ import { useAppointmentToday } from "../../../hooks/admin/appointment/useAppoint
 
 const AppointmentToday = () => {
    const { isLoading, isError, error, data, isFetching } = useAppointmentToday()
+   console.log(data)
 
    return (
       <>
