@@ -81,8 +81,9 @@ const AppointmentEdit = () => {
       isFetching: scheduleDateIsFetching,
       isError: scheduleDateIsError,
       data: scheduleDateData,
-   } = useScheduleDateData("2022-05-06T14:00:00Z")
+   } = useScheduleDateData(date)
 
+   console.log(date)
    console.log(scheduleDateData)
 
    const { data: bookingData } = useBookingsData()
@@ -145,10 +146,6 @@ const AppointmentEdit = () => {
       adminNewStartTime = new Date(adminFormatStartTime).toLocaleString().substring(12, 17)
    }
 
-   console.log(adminStart)
-   console.log(adminStartTime)
-   console.log(adminEndTime)
-
    // Submit Functionality
    const onSubmit = (formData) => {
       // Reset alert displays
@@ -174,9 +171,9 @@ const AppointmentEdit = () => {
          end = end.toString() + ":" + formData.endTime.substring(3, 5)
       }
 
-      console.log(moment(`${adminConvertFormatDate} ${adminNewStartTime}`))
-      console.log(moment(`${adminConvertFormatDate} ${start}`))
-      console.log(moment(`${adminConvertFormatDate} ${adminEndTime}`))
+      // console.log(moment(`${adminConvertFormatDate} ${adminNewStartTime}`))
+      // console.log(moment(`${adminConvertFormatDate} ${start}`))
+      // console.log(moment(`${adminConvertFormatDate} ${adminEndTime}`))
 
       // Function to verify if Booking w/in Admin Schedule
       const checkWithinAdminDate =
