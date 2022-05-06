@@ -9,7 +9,7 @@ const fetchScheduleDate = async ({ queryKey }) => {
 
    // Fetch API GET availability date by date
    if (date) {
-      const results = await fetch(`https://proj19940827.herokuapp.com/availability/date/${date}`, {
+      const results = await fetch(`https://proj19940827.herokuapp.com/api/availability/date/${date}`, {
          method: "GET",
          headers: {
             "Content-Type": "application/json",
