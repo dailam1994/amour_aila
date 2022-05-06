@@ -8,7 +8,7 @@ const editSchedule = async (availability) => {
    const id = availability.availabilityID
 
    // Fetch API PUT availability by ID
-   await fetch(`http://localhost:3333/api/availability/${id}`, {
+   await fetch(`https://proj19940827.herokuapp.com/api/availability/${id}`, {
       method: "PUT",
       headers: {
          "Content-Type": "application/json",
