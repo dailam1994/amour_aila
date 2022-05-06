@@ -168,14 +168,6 @@ const AppointmentEdit = () => {
          end = end.toString() + ":" + formData.endTime.substring(3, 5)
       }
 
-      console.log(moment(`${adminConvertFormatDate} ${adminNewStartTime}`))
-      console.log(moment(`${adminConvertFormatDate} ${start}`))
-      console.log(moment(`${adminConvertFormatDate} ${adminEndTime}`))
-
-      console.log(moment(`${adminConvertFormatDate} ${adminNewStartTime}`))
-      console.log(moment(`${adminConvertFormatDate} ${end}`))
-      console.log(moment(`${adminConvertFormatDate} ${adminEndTime}`))
-
       // Function to verify if Booking w/in Admin Schedule
       const checkWithinAdminDate =
          moment(`${adminConvertFormatDate} ${start}`).isBetween(
@@ -257,6 +249,19 @@ const AppointmentEdit = () => {
                   .replaceAll("/", "-")
                   .split(" ")
                const formatDataEndTimeString = formatDataEndTime[1].substring(0, 5)
+
+               console.log(
+                  moment.range([
+                     moment(`${adminConvertFormatDate} ${start}`),
+                     moment(`${adminConvertFormatDate} ${end}`),
+                  ])
+               )
+               console.log(
+                  moment.range([
+                     moment(`${formatDataDate} ${formatDataStartTimeString}`),
+                     moment(`${formatDataDate} ${formatDataEndTimeString}`),
+                  ])
+               )
 
                // If Statement to handle overlapping Date/Time Ranges w.r.t. Database Part I
                if (
