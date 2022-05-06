@@ -81,7 +81,7 @@ const AppointmentEdit = () => {
       isFetching: scheduleDateIsFetching,
       isError: scheduleDateIsError,
       data: scheduleDateData,
-   } = useScheduleDateData(date)
+   } = useScheduleDateData("2022-05-06T14:00:00Z")
 
    console.log(scheduleDateData)
 
