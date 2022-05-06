@@ -179,8 +179,6 @@ const AppointmentEdit = () => {
             moment(`${adminConvertFormatDate} ${adminEndTime}`)
          )
 
-      console.log(checkWithinAdminDate)
-
       // Function to handle errors
       const errorHandling = () => {
          document.getElementById("booking-edit-error").style.display = "flex"
@@ -249,19 +247,6 @@ const AppointmentEdit = () => {
                   .replaceAll("/", "-")
                   .split(" ")
                const formatDataEndTimeString = formatDataEndTime[1].substring(0, 5)
-
-               console.log(
-                  moment.range([
-                     moment(`${adminConvertFormatDate} ${start}`),
-                     moment(`${adminConvertFormatDate} ${end}`),
-                  ])
-               )
-               console.log(
-                  moment.range([
-                     moment(`${formatDataDate} ${formatDataStartTimeString}`),
-                     moment(`${formatDataDate} ${formatDataEndTimeString}`),
-                  ])
-               )
 
                // If Statement to handle overlapping Date/Time Ranges w.r.t. Database Part I
                if (
