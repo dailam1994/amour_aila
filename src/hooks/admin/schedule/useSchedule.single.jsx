@@ -8,7 +8,7 @@ const fetchSchedule = async ({ queryKey }) => {
    const id = queryKey[1]
 
    // Fetch API GET availability by ID
-   const results = await fetch(`https://proj19940827.herokuapp.com/api/availability/${id}`, {
+   const results = await fetch(`http://localhost:3333/api/availability/${id}`, {
       method: "GET",
       headers: {
          "Content-Type": "application/json",
