@@ -143,6 +143,7 @@ const AppointmentEdit = () => {
       adminNewStartTime = new Date(adminFormatStartTime).toLocaleString().substring(12, 17)
    }
 
+   console.log(adminStart)
    console.log(adminStartTime)
    console.log(adminEndTime)
 
