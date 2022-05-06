@@ -168,6 +168,10 @@ const AppointmentEdit = () => {
          end = end.toString() + ":" + formData.endTime.substring(3, 5)
       }
 
+      console.log(moment(`${adminConvertFormatDate} ${adminNewStartTime}`))
+      console.log(moment(`${adminConvertFormatDate} ${start}`))
+      console.log(moment(`${adminConvertFormatDate} ${adminEndTime}`))
+
       // Function to verify if Booking w/in Admin Schedule
       const checkWithinAdminDate =
          moment(`${adminConvertFormatDate} ${start}`).isBetween(
