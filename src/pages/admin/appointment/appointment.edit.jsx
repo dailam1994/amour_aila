@@ -179,6 +179,8 @@ const AppointmentEdit = () => {
             moment(`${adminConvertFormatDate} ${adminEndTime}`)
          )
 
+      console.log(checkWithinAdminDate)
+
       // Function to handle errors
       const errorHandling = () => {
          document.getElementById("booking-edit-error").style.display = "flex"
