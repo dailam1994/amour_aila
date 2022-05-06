@@ -174,15 +174,6 @@ const BookingAdd = () => {
                .replaceAll("/", "-")
                .split(" ")
             const formatDataEndTimeString = formatDataEndTime[1].substring(0, 5)
-            console.log(
-               moment.range([moment(`${adminConvertFormatDate} ${start}`), moment(`${adminConvertFormatDate} ${end}`)])
-            )
-            console.log(
-               moment.range([
-                  moment(`${formatDataDate} ${formatDataStartTimeString}`).subtract(1, "days"),
-                  moment(`${formatDataDate} ${formatDataEndTimeString}`).subtract(1, "days"),
-               ])
-            )
 
             // If Statement to handle overlapping Date/Time Ranges w.r.t. Database Part I
             if (
