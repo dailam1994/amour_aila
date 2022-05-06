@@ -179,8 +179,8 @@ const BookingAdd = () => {
             )
             console.log(
                moment.range([
-                  moment(`${formatDataDate} ${formatDataStartTimeString}`),
-                  moment(`${formatDataDate} ${formatDataEndTimeString}`),
+                  moment(`${formatDataDate} ${formatDataStartTimeString}`).subtract(1, "days"),
+                  moment(`${formatDataDate} ${formatDataEndTimeString}`).subtract(1, "days"),
                ])
             )
 
@@ -190,8 +190,8 @@ const BookingAdd = () => {
                   .range([moment(`${adminConvertFormatDate} ${start}`), moment(`${adminConvertFormatDate} ${end}`)])
                   .overlaps(
                      moment.range([
-                        moment(`${formatDataDate} ${formatDataStartTimeString}`),
-                        moment(`${formatDataDate} ${formatDataEndTimeString}`),
+                        moment(`${formatDataDate} ${formatDataStartTimeString}`).subtract(1, "days"),
+                        moment(`${formatDataDate} ${formatDataEndTimeString}`).subtract(1, "days"),
                      ])
                   )
             ) {
