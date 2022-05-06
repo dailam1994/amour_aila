@@ -17,7 +17,6 @@ import { useScheduleViewData } from "../../../hooks/admin/schedule/useSchedule.v
 
 const ScheduleView = () => {
    const { isLoading, isError, error, data, isFetching } = useScheduleViewData()
-   console.log(data)
 
    return (
       <>
