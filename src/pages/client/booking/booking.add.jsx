@@ -159,7 +159,6 @@ const BookingAdd = () => {
       } else if (data.length >= 1 && checkWithinAdminDate) {
          // Looping over existing data in the database
          for (let i of data) {
-            console.log(i)
             // Date and Time Conversion Format
             const formatConvertDataDate = new Date(i.date).setDate(new Date(i.date).getDate() + 1)
             const formatDataDate = new Date(formatConvertDataDate).toISOString().substring(0, 10)
@@ -175,6 +174,15 @@ const BookingAdd = () => {
                .replaceAll("/", "-")
                .split(" ")
             const formatDataEndTimeString = formatDataEndTime[1].substring(0, 5)
+            console.log(
+               moment.range([moment(`${adminConvertFormatDate} ${start}`), moment(`${adminConvertFormatDate} ${end}`)])
+            )
+            console.log(
+               moment.range([
+                  moment(`${formatDataDate} ${formatDataStartTimeString}`),
+                  moment(`${formatDataDate} ${formatDataEndTimeString}`),
+               ])
+            )
 
             // If Statement to handle overlapping Date/Time Ranges w.r.t. Database Part I
             if (
