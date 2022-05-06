@@ -10,7 +10,7 @@ const fetchAppointmentUser = async ({ queryKey }) => {
    // If statement to handle existing id
    if (id) {
       // Fetch API GET user by id
-      const results = await fetch(`https://proj19940827.herokuapp.com/api/appointment/user/${id}`, {
+      const results = await fetch(`https://user.technolashes.com/api/appointment/user/${id}`, {
          method: "GET",
          headers: {
             "Content-Type": "application/json",

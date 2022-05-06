@@ -6,7 +6,7 @@ const fetchSchedules = async () => {
    await delay()
 
    // Fetch API GET availabilities
-   const results = await fetch("https://proj19940827.herokuapp.com/api/availabilities", {
+   const results = await fetch("https://user.technolashes.com/api/availabilities", {
       method: "GET",
       headers: {
          "Content-Type": "application/json",

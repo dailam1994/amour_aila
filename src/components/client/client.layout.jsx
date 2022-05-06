@@ -54,7 +54,7 @@ const AdminLayout = () => {
       await delay()
 
       // Fetch API POST user logout
-      await fetch("https://proj19940827.herokuapp.com/api/user/logout", {
+      await fetch("https://user.technolashes.com/api/user/logout", {
          method: "POST",
          credentials: "include",
       })
@@ -62,7 +62,7 @@ const AdminLayout = () => {
             if (res.status === 200) {
                // Handling successfully logout && redirect
                console.log("Logged out successfully!")
-               window.location.href = "https://ux19940827.herokuapp.com/"
+               window.location.href = "https://technolashes.com"
             } else {
                console.log("Error Logging out!")
             }

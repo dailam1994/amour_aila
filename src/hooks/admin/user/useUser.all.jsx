@@ -6,7 +6,7 @@ const fetchUsers = async () => {
    await delay()
 
    // Fetch API GET users
-   const results = await fetch("https://proj19940827.herokuapp.com/api/users", {
+   const results = await fetch("https://user.technolashes.com/api/users", {
       method: "GET",
       headers: {
          "Content-Type": "application/json",

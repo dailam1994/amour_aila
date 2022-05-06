@@ -6,7 +6,7 @@ const addSchedule = async (schedule) => {
    await delay()
 
    // Fetch API POST availability
-   await fetch("https://proj19940827.herokuapp.com/api/availability", {
+   await fetch("https://user.technolashes.com/api/availability", {
       method: "POST",
       headers: {
          "Content-Type": "application/json",

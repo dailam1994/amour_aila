@@ -6,7 +6,7 @@ const addUser = async (user) => {
    await delay()
 
    // Fetch API POST user
-   await fetch("https://proj19940827.herokuapp.com/api/user", {
+   await fetch("https://user.technolashes.com/api/user", {
       method: "POST",
       headers: {
          "Content-Type": "application/json",
