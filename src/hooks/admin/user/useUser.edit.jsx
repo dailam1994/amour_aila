@@ -8,7 +8,7 @@ const editUser = async (user) => {
    const id = user.userID
 
    // Fetch API PUT user by ID
-   const results = await fetch(`https://server-lashes19940827.herokuapp.com/api/user/${id}`, {
+   const results = await fetch(`https://proj19940827.herokuapp.com/api/user/${id}`, {
       method: "PUT",
       headers: {
          "Content-Type": "application/json",

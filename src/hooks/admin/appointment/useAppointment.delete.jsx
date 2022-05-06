@@ -9,7 +9,7 @@ const deleteAppointment = async (booking) => {
    const id = booking.bookingID
 
    // Fetch API DELETE for bookings by ID
-   await fetch(`https://server-lashes19940827.herokuapp.com/api/booking/${id}`, {
+   await fetch(`https://proj19940827.herokuapp.com/api/booking/${id}`, {
       method: "DELETE",
       headers: {
          "Content-Type": "application/json",

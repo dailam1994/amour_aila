@@ -157,7 +157,7 @@ const AppointmentEdit = () => {
          start = start.substring(0, 5)
       } else if (formData.startTime.match("pm")) {
          start = parseInt(formData.startTime.substring(0, 2)) + 12
-         start = start.toString() + ":00"
+         start = start.toString() + ":" + formData.startTime.substring(3, 5)
       }
 
       // If statement to handle conversion of formData from end time
@@ -165,7 +165,7 @@ const AppointmentEdit = () => {
          end = end.substring(0, 5)
       } else if (formData.endTime.match("pm")) {
          end = parseInt(formData.endTime.substring(0, 2)) + 12
-         end = end.toString() + ":00"
+         end = end.toString() + ":" + formData.endTime.substring(3, 5)
       }
 
       // Function to verify if Booking w/in Admin Schedule

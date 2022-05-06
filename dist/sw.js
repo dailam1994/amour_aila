@@ -35,18 +35,18 @@ define(["./workbox-b3e22772"], function (e) {
    }),
       e.precacheAndRoute(
          [
-            { url: "assets/admin.layout.482a5c20.js", revision: null },
-            { url: "assets/client.layout.e94b1a9d.js", revision: null },
+            { url: "assets/admin.layout.509ac734.js", revision: null },
+            { url: "assets/client.layout.0350e3b9.js", revision: null },
             { url: "assets/guest.about.4fae4dfa.js", revision: null },
             { url: "assets/guest.blog.1e529a0a.js", revision: null },
             { url: "assets/guest.contact.84af5ad1.js", revision: null },
-            { url: "assets/guest.login.7aa369cf.js", revision: null },
+            { url: "assets/guest.login.3860c388.js", revision: null },
             { url: "assets/guest.service.614cfd0f.js", revision: null },
-            { url: "assets/index.329a2621.js", revision: null },
+            { url: "assets/index.d044d2d4.js", revision: null },
             { url: "assets/index.d277bf68.css", revision: null },
-            { url: "assets/useBooking.all.b37b106b.js", revision: null },
+            { url: "assets/useBooking.all.53f74d08.js", revision: null },
             { url: "assets/vendor.744e3b36.js", revision: null },
-            { url: "index.html", revision: "24b7d5995180c20f02a6ee751936f86b" },
+            { url: "index.html", revision: "5ad7dbec66c640bc1efd4b98c6470833" },
             { url: "favicon.ico", revision: "cd2ae4b5f8143cf077e942ba57a7910b" },
             { url: "robots.txt", revision: "f77c87f977e0fcce05a6df46c885a129" },
             { url: "apple-touch-icon.png", revision: "771d7ef04f2e639138631efb400a2d09" },
@@ -152,4 +152,4 @@ workbox.routing.registerRoute(
 )
 
 // Required Workbox Precaching 2)
-workbox.precaching.precacheAndRoute([{"revision":"a2f4c35190ec8e6fabe46138b9adfb0a","url":"android-chrome-192x192.png"},{"revision":"d03268467a9b4d25a81792c17f2204a8","url":"android-chrome-512x512.png"},{"revision":"771d7ef04f2e639138631efb400a2d09","url":"apple-touch-icon.png"},{"revision":"23d3ccd2e767bc3494639d96e5e2db5f","url":"assets/admin.layout.482a5c20.js"},{"revision":"c1d0055dcbd7b6b74683e0eb06331390","url":"assets/client.layout.e94b1a9d.js"},{"revision":"695fa6cb16bed687b22780ded234e9ad","url":"assets/guest.about.4fae4dfa.js"},{"revision":"dbcbe9255f35d6bb24382ceb8a767401","url":"assets/guest.blog.1e529a0a.js"},{"revision":"cd118b3cf853f75885a5ec354978a6e7","url":"assets/guest.contact.84af5ad1.js"},{"revision":"a2eedd96c5f4abd678bc5d55ea407fce","url":"assets/guest.login.7aa369cf.js"},{"revision":"f0d93c8afab7111f9bd0b0e7241320d2","url":"assets/guest.service.614cfd0f.js"},{"revision":"7029aa3e493efa20d26359e49f2931ae","url":"assets/index.329a2621.js"},{"revision":"31d1a801f7134c420059132a1b2d43bf","url":"assets/index.d277bf68.css"},{"revision":"295fdb7ad00118f4ba6c986094b8502e","url":"assets/useBooking.all.b37b106b.js"},{"revision":"2af5b10efc8a6d7d4bd0af56bb2525c6","url":"assets/vendor.744e3b36.js"},{"revision":"37d0f7f71b2fbebf3d42d4a7eb4071a6","url":"browserconfig.xml"},{"revision":"83a2877cb540b1f98787d6e874a9e52d","url":"favicon-16x16.png"},{"revision":"4091ecc36013862fc72fe8f71926ec4f","url":"favicon-32x32.png"},{"revision":"cd2ae4b5f8143cf077e942ba57a7910b","url":"favicon.ico"},{"revision":"24b7d5995180c20f02a6ee751936f86b","url":"index.html"},{"revision":"41da3210e1a08cfd1bee1aa1a429b755","url":"manifest.webmanifest"},{"revision":"340777f19bb984a626adef7d41260f80","url":"mstile-150x150.png"},{"revision":"f77c87f977e0fcce05a6df46c885a129","url":"robots.txt"},{"revision":"3160eba834fda7b2ad8f03f81a231398","url":"safari-pinned-tab.svg"},{"revision":"5988440eb82bf82353127585dec11394","url":"site.webmanifest"},{"revision":"9b54c1e88eb43c57fdd0227f3bb03ecb","url":"workbox-b3e22772.js"}])
+workbox.precaching.precacheAndRoute([{"revision":"a2f4c35190ec8e6fabe46138b9adfb0a","url":"android-chrome-192x192.png"},{"revision":"d03268467a9b4d25a81792c17f2204a8","url":"android-chrome-512x512.png"},{"revision":"771d7ef04f2e639138631efb400a2d09","url":"apple-touch-icon.png"},{"revision":"bac307222f5d8c811b233fe16fe303c2","url":"assets/admin.layout.509ac734.js"},{"revision":"03a008e1888e5fbc096479b020b6575c","url":"assets/client.layout.0350e3b9.js"},{"revision":"695fa6cb16bed687b22780ded234e9ad","url":"assets/guest.about.4fae4dfa.js"},{"revision":"dbcbe9255f35d6bb24382ceb8a767401","url":"assets/guest.blog.1e529a0a.js"},{"revision":"cd118b3cf853f75885a5ec354978a6e7","url":"assets/guest.contact.84af5ad1.js"},{"revision":"ae2adae39fbe48ca0220a89d95ad66fb","url":"assets/guest.login.3860c388.js"},{"revision":"f0d93c8afab7111f9bd0b0e7241320d2","url":"assets/guest.service.614cfd0f.js"},{"revision":"b0701f035a05f97b079ab6956328de94","url":"assets/index.d044d2d4.js"},{"revision":"31d1a801f7134c420059132a1b2d43bf","url":"assets/index.d277bf68.css"},{"revision":"b816713d3a93b51b49b0b0e86f717ddc","url":"assets/useBooking.all.53f74d08.js"},{"revision":"2af5b10efc8a6d7d4bd0af56bb2525c6","url":"assets/vendor.744e3b36.js"},{"revision":"37d0f7f71b2fbebf3d42d4a7eb4071a6","url":"browserconfig.xml"},{"revision":"83a2877cb540b1f98787d6e874a9e52d","url":"favicon-16x16.png"},{"revision":"4091ecc36013862fc72fe8f71926ec4f","url":"favicon-32x32.png"},{"revision":"cd2ae4b5f8143cf077e942ba57a7910b","url":"favicon.ico"},{"revision":"5ad7dbec66c640bc1efd4b98c6470833","url":"index.html"},{"revision":"41da3210e1a08cfd1bee1aa1a429b755","url":"manifest.webmanifest"},{"revision":"340777f19bb984a626adef7d41260f80","url":"mstile-150x150.png"},{"revision":"f77c87f977e0fcce05a6df46c885a129","url":"robots.txt"},{"revision":"3160eba834fda7b2ad8f03f81a231398","url":"safari-pinned-tab.svg"},{"revision":"5988440eb82bf82353127585dec11394","url":"site.webmanifest"},{"revision":"9b54c1e88eb43c57fdd0227f3bb03ecb","url":"workbox-b3e22772.js"}])

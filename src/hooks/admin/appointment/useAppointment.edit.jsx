@@ -8,7 +8,7 @@ const editAppointment = async (booking) => {
    const id = booking.bookingID
 
    // Fetch API PUT for bookings by ID
-   await fetch(`https://server-lashes19940827.herokuapp.com/api/booking/${id}`, {
+   await fetch(`https://proj19940827.herokuapp.com/api/booking/${id}`, {
       method: "PUT",
       headers: {
          "Content-Type": "application/json",

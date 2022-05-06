@@ -6,7 +6,7 @@ const loginGuest = async (guest) => {
    await delay()
 
    // Fetch API POST User Login Data
-   await fetch("https://server-lashes19940827.herokuapp.com/api/user/login", {
+   await fetch("https://proj19940827.herokuapp.com/api/user/login", {
       method: "POST",
       headers: {
          "Content-Type": "application/json",
@@ -32,7 +32,7 @@ const loginGuest = async (guest) => {
          // If statement to handle json message and redirect
          if (json) {
             alert(json.message)
-            window.location.href = "https://client-lashes19940827.herokuapp.com/"
+            window.location.href = "https://ux19940827.herokuapp.com/"
          }
       })
       .catch((err) => alert(err))
