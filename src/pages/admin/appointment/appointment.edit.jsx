@@ -83,6 +83,8 @@ const AppointmentEdit = () => {
       data: scheduleDateData,
    } = useScheduleDateData(date)
 
+   console.log(scheduleDateData)
+
    const { data: bookingData } = useBookingsData()
 
    const {
