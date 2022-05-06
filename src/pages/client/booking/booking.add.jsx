@@ -159,6 +159,7 @@ const BookingAdd = () => {
       } else if (data.length >= 1 && checkWithinAdminDate) {
          // Looping over existing data in the database
          for (let i of data) {
+            console.log(i)
             // Date and Time Conversion Format
             const formatConvertDataDate = new Date(i.date).setDate(new Date(i.date).getDate() + 1)
             const formatDataDate = new Date(formatConvertDataDate).toISOString().substring(0, 10)
