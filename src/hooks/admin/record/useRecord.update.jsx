@@ -4,12 +4,10 @@ const updateRecord = async (record) => {
    // Delaying function
    const delay = (ms = 4400) => new Promise((r) => setTimeout(r, ms))
    await delay()
-   console.log()
 
    const id = record.recordID
-   console.log(id)
 
-   // Fetch API PUT for bookings by ID
+   // Fetch API PUT for record by ID
    await fetch(`https://user.technolashes.com/api/record/${id}`, {
       method: "PUT",
       headers: {

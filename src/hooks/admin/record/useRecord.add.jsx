@@ -5,8 +5,7 @@ const addRecord = async (record) => {
    const delay = (ms = 2200) => new Promise((r) => setTimeout(r, ms))
    await delay()
 
-   console.log(record)
-   // Fetch API POST user
+   // Fetch API POST record
    await fetch("https://user.technolashes.com/api/record", {
       method: "POST",
       headers: {

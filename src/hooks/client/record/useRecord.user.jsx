@@ -9,7 +9,7 @@ const fetchRecordUser = async ({ queryKey }) => {
 
    // If statement to handle existing id
    if (id) {
-      // Fetch API GET user by ID
+      // Fetch API GET record by ID
       const results = await fetch(`https://user.technolashes.com/api/record/user/${id}`, {
          method: "GET",
          headers: {

@@ -19,8 +19,6 @@ const RecordAll = () => {
    let result
    let resultDate
 
-   console.log(data)
-
    if (data) {
       // Filtering through the data using the reduce method for user ID
       result = data.reduce((unique, o) => {
