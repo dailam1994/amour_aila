@@ -136,7 +136,7 @@ const RecordAdd = () => {
                }}
             />
             {errors.endTime && <span style={errorInput}>! Invalid End Time 12:00PM - format ...</span>}
-            <FormGroup sx={{ width: 1, ml: 11, mt: 2 }}>
+            <FormGroup sx={{ width: 1, ml: 1, mt: 2 }}>
                <FormControlLabel
                   control={<Checkbox color="success" sx={{ color: "rgb(255,255,255)" }} {...register("serviceOne")} />}
                   label="Service 1"
