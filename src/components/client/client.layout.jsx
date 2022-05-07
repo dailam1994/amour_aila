@@ -14,16 +14,11 @@ const pages = [
    },
    {
       id: 2,
-      title: "Booking",
-      href: "booking/availability",
+      title: "Record",
+      href: "record",
    },
    {
       id: 3,
-      title: "Appointments",
-      href: "appointment/user",
-   },
-   {
-      id: 4,
       title: "Settings",
       href: "settings",
    },

@@ -125,3 +125,18 @@ npm run preview "Running the application in production mode"
 -  Completed App
    -  Day/Night Mode
    -  PWA
+
+(2022-05-08) [01:42]
+
+-  New Entity
+
+   -  Admin
+      -  Read, Update and Delete Record
+   -  Client
+      -  Read, Create and Update Record
+
+-  Removed Entities
+   -  Admin & Client
+      -  Availablity
+      -  Schedule
+      -  Booking

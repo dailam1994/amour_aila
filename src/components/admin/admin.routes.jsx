@@ -7,31 +7,19 @@ import UserSingle from "../../pages/admin/user/user.single"
 import UserAdd from "../../pages/admin/user/user.add"
 import UserEdit from "../../pages/admin/user/user.edit"
 import UserDelete from "../../pages/admin/user/user.delete"
-import ScheduleAll from "../../pages/admin/schedule/schedule.all"
-import ScheduleAdd from "../../pages/admin/schedule/schedule.add"
-import DateAdd from "../../pages/admin/schedule/date.add"
-import ScheduleView from "../../pages/admin/schedule/schedule.view"
-import ScheduleEdit from "../../pages/admin/schedule/schedule.edit"
-import ScheduleDelete from "../../pages/admin/schedule/schedule.delete"
-import AdminAppointment from "../../pages/admin/appointment/appointment.home"
-import AppointmentEdit from "../../pages/admin/appointment/appointment.edit"
-import AppointmentDelete from "../../pages/admin/appointment/appointment.delete"
+import RecordAll from "../../pages/admin/record/record.all"
+import RecordUpdate from "../../pages/admin/record/record.update"
+import RecordDelete from "../../pages/admin/record/record.delete"
 import DisplayMode from "../../pages/display/display.mode"
 
 const AdminRoutes = () => {
    return (
       <>
          <Routes>
+            <Route path="record" element={<RecordAll />} />
+            <Route path="record/delete/:id" element={<RecordDelete />} />
+            <Route path="record/update/:id" element={<RecordUpdate />} />
             <Route path="display" element={<DisplayMode />} />
-            <Route path="appointment/delete/:id" element={<AppointmentDelete />} />
-            <Route path="appointment/edit/:id" element={<AppointmentEdit />} />
-            <Route path="appointment" element={<AdminAppointment />} />
-            <Route path="schedule/delete/:id" element={<ScheduleDelete />} />
-            <Route path="schedule/edit/:id" element={<ScheduleEdit />} />
-            <Route path="schedule/view" element={<ScheduleView />} />
-            <Route path="date/add" element={<DateAdd />} />
-            <Route path="schedule/add/:date" element={<ScheduleAdd />} />
-            <Route path="schedule/all" element={<ScheduleAll />} />
             <Route path="user/delete/:id" element={<UserDelete />} />
             <Route path="user/edit/:id" element={<UserEdit />} />
             <Route path="user/add" element={<UserAdd />} />
