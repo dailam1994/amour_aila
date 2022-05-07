@@ -34,8 +34,7 @@ const Footer = () => {
          </Box>
          <Box id="internal-links">
             <Link to="/">Home</Link>
-            <Link to="schedule/all">Work Schedule</Link>
-            <Link to="/appointment">Appointment</Link>
+            <Link to="/record">Record</Link>
          </Box>
          <Typography className="copyright" variant="caption" display="block" align="center">
             AmourAila © 2022
