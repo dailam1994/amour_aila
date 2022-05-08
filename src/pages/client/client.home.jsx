@@ -1,7 +1,9 @@
 import React from "react"
-import { useSessionData } from "../../hooks/client/useClient.session"
+import { Link } from "react-router-dom"
 import { Typography } from "@mui/material"
 import { dayMode, nightMode } from "../display/display.mode"
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline"
+import { useSessionData } from "../../hooks/client/useClient.session"
 
 const ClientHome = () => {
    // If Statement to handle storage colour
@@ -17,6 +19,13 @@ const ClientHome = () => {
       <>
          <Typography sx={{ m: "10px" }} variant="h4">
             {data ? <strong>Welcome {data.user.username},</strong> : <strong>Welcome Client,</strong>}
+            <Link to="/tutorial">
+               <HelpOutlineIcon
+                  size="small"
+                  color="primary"
+                  sx={{ position: "absolute", right: 1, mr: "10px", mt: "10px" }}
+               />
+            </Link>
          </Typography>
          <Typography sx={{ my: "10px", mx: "30px", pb: "10px" }} variant="subtitle1">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et

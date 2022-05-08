@@ -7,6 +7,7 @@ import RecordList from "../../pages/client/record/record.list"
 import RecordAdd from "../../pages/admin/record/record.add"
 import RecordUpdate from "../../pages/admin/record/record.update"
 import DisplayMode from "../../pages/display/display.mode"
+import ClientTutorial from "../../pages/client/client.tutorial"
 
 const AdminRoutes = () => {
    return (
@@ -16,6 +17,7 @@ const AdminRoutes = () => {
             <Route path="record/add" element={<RecordAdd />} />
             <Route path="record/update/:id" element={<RecordUpdate />} />
             <Route path="display" element={<DisplayMode />} />
+            <Route path="tutorial" element={<ClientTutorial />} />
             <Route path="user/edit" element={<UserEdit />} />
             <Route path="settings" element={<ClientSettings />} />
             <Route path="registered/home" element={<ClientHome />} />

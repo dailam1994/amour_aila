@@ -140,3 +140,7 @@ npm run preview "Running the application in production mode"
       -  Availablity
       -  Schedule
       -  Booking
+
+(2022-05-08) [12:42]
+
+-  Admin & Client Help Tutorial

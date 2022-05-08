@@ -1,6 +1,8 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import { Typography } from "@mui/material"
 import { dayMode, nightMode } from "../display/display.mode"
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline"
 
 const AdminHome = () => {
    // If Statement to handle storage colour
@@ -14,6 +16,13 @@ const AdminHome = () => {
       <>
          <Typography sx={{ m: "10px" }} variant="h4">
             <strong>Welcome Aila,</strong>
+            <Link to="/tutorial">
+               <HelpOutlineIcon
+                  size="small"
+                  color="primary"
+                  sx={{ position: "absolute", right: 1, mr: "10px", mt: "10px" }}
+               />
+            </Link>
          </Typography>
          <Typography sx={{ my: "10px", mx: "30px", pb: "10px" }} variant="subtitle1">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
