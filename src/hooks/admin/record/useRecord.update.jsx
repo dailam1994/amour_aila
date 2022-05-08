@@ -8,7 +8,7 @@ const updateRecord = async (record) => {
    const id = record.recordID
 
    // Fetch API PUT for record by ID
-   await fetch(`http://localhost:3333/api/record/${id}`, {
+   await fetch(`https://user.technolashes.com/api/record/${id}`, {
       method: "PUT",
       headers: {
          "Content-Type": "application/json",

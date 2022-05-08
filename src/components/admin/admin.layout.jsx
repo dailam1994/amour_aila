@@ -48,7 +48,7 @@ const AdminLayout = () => {
       await delay()
 
       // Fetch API POST user logout
-      await fetch("http://localhost:3333/api/user/logout", {
+      await fetch("https://user.technolashes.com/api/user/logout", {
          method: "POST",
          credentials: "include",
       })
@@ -56,7 +56,7 @@ const AdminLayout = () => {
             if (res.status === 200) {
                // Handling the successful logut & refirect
                console.log("Logged out successfully!")
-               window.location.href = "http://localhost:3000"
+               window.location.href = "https://technolashes.com"
             } else {
                console.log("Error Logging out!")
             }

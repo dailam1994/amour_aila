@@ -6,7 +6,7 @@ const fetchRecords = async () => {
    await delay()
 
    // Fetch API GET records
-   const results = await fetch("http://localhost:3333/api/records", {
+   const results = await fetch("https://user.technolashes.com/api/records", {
       method: "GET",
       headers: {
          "Content-Type": "application/json",

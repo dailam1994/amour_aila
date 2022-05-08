@@ -6,7 +6,7 @@ const loginGuest = async (guest) => {
    await delay()
 
    // Fetch API POST User Login Data
-   await fetch("http://localhost:3333/api/user/login", {
+   await fetch("https://user.technolashes.com/api/user/login", {
       method: "POST",
       headers: {
          "Content-Type": "application/json",
@@ -32,7 +32,7 @@ const loginGuest = async (guest) => {
          // If statement to handle json message and redirect
          if (json) {
             alert(json.message)
-            window.location.href = "http://localhost:3000"
+            window.location.href = "https://technolashes.com"
          }
       })
       .catch((err) => alert(err))

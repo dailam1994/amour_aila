@@ -6,7 +6,7 @@ const addRecord = async (record) => {
    await delay()
 
    // Fetch API POST record
-   await fetch("http://localhost:3333/api/record", {
+   await fetch("https://user.technolashes.com/api/record", {
       method: "POST",
       headers: {
          "Content-Type": "application/json",
