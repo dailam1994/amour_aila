@@ -152,4 +152,5 @@ workbox.routing.registerRoute(
 )
 
 // Required Workbox Precaching 2)
+workbox.precaching.cleanupOutdatedCaches()
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST)
