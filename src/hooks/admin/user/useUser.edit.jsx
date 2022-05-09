@@ -8,7 +8,7 @@ const editUser = async (user) => {
    const id = user.userID
 
    // Fetch API PUT user by ID
-   const results = await fetch(`https://user.technolashes.com/api/user/${id}`, {
+   const results = await fetch(`https://api.technolashes.com/api/user/${id}`, {
       method: "PUT",
       headers: {
          "Content-Type": "application/json",

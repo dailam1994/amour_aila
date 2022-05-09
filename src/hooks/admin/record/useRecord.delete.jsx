@@ -9,7 +9,7 @@ const deleteRecord = async (record) => {
    const id = record.recordID
 
    // Fetch API DELETE for records by ID
-   await fetch(`https://user.technolashes.com/api/record/${id}`, {
+   await fetch(`https://api.technolashes.com/api/record/${id}`, {
       method: "DELETE",
       headers: {
          "Content-Type": "application/json",

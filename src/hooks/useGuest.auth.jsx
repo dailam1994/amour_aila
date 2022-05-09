@@ -6,7 +6,7 @@ const fetchAuth = async () => {
    await delay()
 
    // Fetch API GET user authentication data
-   const results = await fetch("https://user.technolashes.com/api/user/auth", {
+   const results = await fetch("https://api.technolashes.com/api/user/auth", {
       method: "GET",
       headers: {
          "Content-Type": "application/json",

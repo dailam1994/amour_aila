@@ -9,7 +9,7 @@ const deleteUser = async (user) => {
    const id = user.userID
 
    // Fetch API DELETE user by ID
-   await fetch(`https://user.technolashes.com/api/user/${id}`, {
+   await fetch(`https://api.technolashes.com/api/user/${id}`, {
       method: "DELETE",
       headers: {
          "Content-Type": "application/json",
