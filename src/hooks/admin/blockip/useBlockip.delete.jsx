@@ -1,27 +1,27 @@
 import { useMutation, useQueryClient } from "react-query"
 import { useNavigate } from "react-router-dom"
 
-const deleteRecord = async (record) => {
+const deleteBlockip = async (data) => {
    // Delaying function
    const delay = (ms = 2200) => new Promise((r) => setTimeout(r, ms))
    await delay()
 
-   const id = record.recordID
+   const ip = data
 
-   // Fetch API DELETE for records by ID
-   await fetch(`https://user.technolashes.com/api/record/${id}`, {
+   // Fetch API DELETE user by ID
+   await fetch("https://user.technolashes.com/api/blockip", {
       method: "DELETE",
       headers: {
          "Content-Type": "application/json",
       },
       credentials: "include",
-      body: JSON.stringify(record),
+      body: JSON.stringify(ip),
    })
       .then((res) => {
          switch (res.status) {
             case 200:
-               // Display successful alert message
-               document.getElementById("record-delete-success").style.display = "flex"
+               // Handle success alert display
+               document.getElementById("ip-delete-success").style.display = "flex"
                return
             case 400:
                throw new Error("400 Status Code")
@@ -34,22 +34,22 @@ const deleteRecord = async (record) => {
          }
       })
       .catch((err) => {
-         // Handling error display alert
-         document.getElementById("record-delete-error").style.display = "flex"
-         document.getElementById("record-delete-error-message").innerHTML = err
+         // Handle error alert display
+         document.getElementById("ip-delete-error").style.display = "flex"
+         document.getElementById("ip-delete-error-message").innerHTML = err
          console.log(err)
       })
 }
 
-export const useDeleteRecord = () => {
+export const useDeleteBlockip = () => {
    const queryClient = useQueryClient()
    const navigate = useNavigate()
 
-   return useMutation(deleteRecord, {
+   return useMutation(deleteBlockip, {
       refetchOnWindowFocus: false,
       onSuccess: () => {
-         queryClient.invalidateQueries("record-all")
-         setTimeout(() => navigate("/record"), 2500) // Delay response on successful implementation
+         queryClient.invalidateQueries("blockip-all")
+         setTimeout(() => navigate("/log/all"), 2500) // Delay on success implementation
       },
    })
 }

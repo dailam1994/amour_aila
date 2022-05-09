@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { Container, MenuItem, Typography } from "@mui/material"
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"
 import GroupIcon from "@mui/icons-material/Group"
+import DescriptionIcon from "@mui/icons-material/Description"
 import SettingsBrightnessIcon from "@mui/icons-material/SettingsBrightness"
 
 const AdminSettings = () => {
@@ -17,6 +18,19 @@ const AdminSettings = () => {
                   <GroupIcon color="primary" />
                   <Typography sx={{ ml: "20px" }} aligh="center" color="primary">
                      Account Management
+                  </Typography>
+                  <ArrowForwardIosIcon
+                     fontSize="small"
+                     color="primary"
+                     style={{ position: "absolute", right: "10px" }}
+                  />
+               </MenuItem>
+            </Link>
+            <Link to="/log/all" style={{ margin: 0 }}>
+               <MenuItem>
+                  <DescriptionIcon color="primary" />
+                  <Typography sx={{ ml: "20px" }} aligh="center" color="primary">
+                     Logs
                   </Typography>
                   <ArrowForwardIosIcon
                      fontSize="small"
