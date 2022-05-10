@@ -6,7 +6,7 @@ const fetchWhitelist = async () => {
    await delay()
 
    // Fetch API GET White Lists
-   const results = await fetch("https://api.technolashes.com/api/whitelists", {
+   const results = await fetch("https://api1.technolashes.com/api/whitelists", {
       method: "GET",
       headers: {
          "Content-Type": "application/json",

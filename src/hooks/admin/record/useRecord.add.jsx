@@ -6,7 +6,7 @@ const addRecord = async (record) => {
    await delay()
 
    // Fetch API POST record
-   await fetch("https://api.technolashes.com/api/record", {
+   await fetch("https://api1.technolashes.com/api/record", {
       method: "POST",
       headers: {
          "Content-Type": "application/json",

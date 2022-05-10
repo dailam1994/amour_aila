@@ -48,7 +48,7 @@ const AdminLayout = () => {
       await delay()
 
       // Fetch API POST user logout
-      await fetch("https://api.technolashes.com/api/user/logout", {
+      await fetch("https://api1.technolashes.com/api/user/logout", {
          method: "POST",
          credentials: "include",
       })

@@ -6,7 +6,7 @@ const addUser = async (user) => {
    await delay()
 
    // Fetch API POST user
-   await fetch("https://api.technolashes.com/api/user", {
+   await fetch("https://api1.technolashes.com/api/user", {
       method: "POST",
       headers: {
          "Content-Type": "application/json",

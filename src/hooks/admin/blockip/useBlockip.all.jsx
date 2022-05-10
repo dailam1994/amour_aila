@@ -6,7 +6,7 @@ const fetchBlockips = async () => {
    await delay()
 
    // Fetch API GET Block IPs
-   const results = await fetch("https://api.technolashes.com/api/blockips", {
+   const results = await fetch("https://api1.technolashes.com/api/blockips", {
       method: "GET",
       headers: {
          "Content-Type": "application/json",

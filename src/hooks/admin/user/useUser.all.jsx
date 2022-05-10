@@ -6,7 +6,7 @@ const fetchUsers = async () => {
    await delay()
 
    // Fetch API GET users
-   const results = await fetch("https://api.technolashes.com/api/users", {
+   const results = await fetch("https://api1.technolashes.com/api/users", {
       method: "GET",
       headers: {
          "Content-Type": "application/json",

@@ -6,7 +6,7 @@ const addWhitelist = async (ip) => {
    await delay()
 
    // Fetch API POST White List
-   await fetch("https://api.technolashes.com/api/whitelist", {
+   await fetch("https://api1.technolashes.com/api/whitelist", {
       method: "POST",
       headers: {
          "Content-Type": "application/json",

@@ -6,7 +6,7 @@ const loginGuest = async (guest) => {
    await delay()
 
    // Fetch API POST User Login Data
-   await fetch("https://api.technolashes.com/api/user/login", {
+   await fetch("https://api1.technolashes.com/api/user/login", {
       method: "POST",
       headers: {
          "Content-Type": "application/json",

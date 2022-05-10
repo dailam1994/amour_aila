@@ -7,7 +7,7 @@ const clearLog = async () => {
    await delay()
 
    // Fetch API DELETE ALL Logs
-   await fetch(`https://api.technolashes.com/api/loggings`, {
+   await fetch(`https://api1.technolashes.com/api/loggings`, {
       method: "DELETE",
       credentials: "include",
    })
