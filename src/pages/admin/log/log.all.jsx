@@ -15,6 +15,7 @@ import {
    Stack,
 } from "@mui/material"
 import { errorInput, useStyles } from "../../guest/guest.login"
+import KeyboardReturnIcon from "@mui/icons-material/KeyboardReturn"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import { useLogAllData } from "../../../hooks/admin/log/useLog.all"
 import { useAddBlockip } from "../../../hooks/admin/blockip/useBlockip.add"
@@ -34,6 +35,11 @@ const LogAll = () => {
    const { mutate } = useAddBlockip()
 
    if (data) {
+      if (document.getElementById("ip-add-error")) {
+         // Removing alert boxes upon submission request
+         document.getElementById("ip-add-error").style.display = "none"
+      }
+
       // Filtering through the data using the reduce method for user ID
       log = data.reduce((unique, o) => {
          if (!unique.some((obj) => obj.ip === o.ip)) {
@@ -209,6 +215,12 @@ const LogAll = () => {
                })
             ) : null}
          </Box>
+         <Link to="/settings">
+            <Button sx={{ m: "10px", mb: "20px" }} variant="contained" color="primary">
+               <KeyboardReturnIcon fontSize="small" sx={{ mr: "10px" }} />
+               Back
+            </Button>
+         </Link>
       </>
    )
 }

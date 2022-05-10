@@ -25,6 +25,8 @@ const fetchUser = async ({ queryKey }) => {
                   throw new Error("400 Status Code")
                case 401:
                   throw new Error("401 Status Code")
+               case 404:
+                  throw new Error("404 Status Code")
                case 429:
                   throw new Error("429 Status Code")
                case 500:
@@ -37,7 +39,19 @@ const fetchUser = async ({ queryKey }) => {
                return json
             }
          })
-         .catch((err) => console.log(err))
+         .catch((err) => {
+            if (document.getElementById("user-edit-error")) {
+               // Handling alert display of errors
+               document.getElementById("user-edit-error").style.display = "flex"
+               document.getElementById("user-edit-error-message").innerHTML = err
+            } else if (document.getElementById("user-single-error")) {
+               // Handling alert display of errors
+               document.getElementById("user-single-error").style.display = "flex"
+               document.getElementById("user-single-error-message").innerHTML = err
+            }
+
+            console.log(err)
+         })
 
       return results
    }

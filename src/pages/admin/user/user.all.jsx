@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import {
+   Alert,
    Box,
    Button,
    CircularProgress,
@@ -13,14 +14,28 @@ import {
    TableHead,
    TableRow,
    Typography,
+   Stack,
 } from "@mui/material"
+import KeyboardReturnIcon from "@mui/icons-material/KeyboardReturn"
 import { useUserAllData } from "../../../hooks/admin/user/useUser.all"
 
 const UserAll = () => {
    const { isLoading, isError, error, data, isFetching } = useUserAllData()
 
+   useEffect(() => {
+      if (data) {
+         // Removing alert boxes upon submission request
+         document.getElementById("user-all-error").style.display = "none"
+      }
+   }, [data])
+
    return (
       <>
+         <Stack sx={{ width: "100%" }}>
+            <Alert id="user-all-error" severity="error" style={{ display: "none" }}>
+               <strong id="user-all-error-message"></strong>
+            </Alert>
+         </Stack>
          <Typography sx={{ m: "10px" }} variant="h4">
             <strong>Account Management</strong>
          </Typography>
@@ -120,6 +135,12 @@ const UserAll = () => {
                </Table>
             </TableContainer>
          </Box>
+         <Link to="/settings">
+            <Button sx={{ m: "10px", mb: "20px" }} variant="contained" color="primary">
+               <KeyboardReturnIcon fontSize="small" sx={{ mr: "10px" }} />
+               Back
+            </Button>
+         </Link>
       </>
    )
 }

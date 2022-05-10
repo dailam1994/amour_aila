@@ -35,18 +35,18 @@ define(["./workbox-b3e22772"], function (e) {
    }),
       e.precacheAndRoute(
          [
-            { url: "assets/admin.layout.58511dbb.js", revision: null },
-            { url: "assets/client.layout.035fda51.js", revision: null },
-            { url: "assets/guest.about.d98a37f2.js", revision: null },
-            { url: "assets/guest.blog.8e0ac823.js", revision: null },
-            { url: "assets/guest.contact.9e4f6118.js", revision: null },
-            { url: "assets/guest.login.9f9c7d44.js", revision: null },
-            { url: "assets/guest.service.a8923e62.js", revision: null },
-            { url: "assets/index.2546fe19.js", revision: null },
+            { url: "assets/admin.layout.7de03583.js", revision: null },
+            { url: "assets/client.layout.563f0b0b.js", revision: null },
+            { url: "assets/guest.about.be9c9100.js", revision: null },
+            { url: "assets/guest.blog.821cb4d0.js", revision: null },
+            { url: "assets/guest.contact.ba4d0e75.js", revision: null },
+            { url: "assets/guest.login.f84343e3.js", revision: null },
+            { url: "assets/guest.service.5c2606d6.js", revision: null },
+            { url: "assets/index.61e7883c.js", revision: null },
             { url: "assets/index.d277bf68.css", revision: null },
-            { url: "assets/record.update.454886fa.js", revision: null },
-            { url: "assets/vendor.686b308e.js", revision: null },
-            { url: "index.html", revision: "20e11d01fdb9693c7cd27b137fe92908" },
+            { url: "assets/record.update.9ade2f00.js", revision: null },
+            { url: "assets/vendor.94faf113.js", revision: null },
+            { url: "index.html", revision: "47cb67594cfb37afaf8634d04389ad75" },
             { url: "favicon.ico", revision: "cd2ae4b5f8143cf077e942ba57a7910b" },
             { url: "robots.txt", revision: "f77c87f977e0fcce05a6df46c885a129" },
             { url: "apple-touch-icon.png", revision: "771d7ef04f2e639138631efb400a2d09" },
@@ -153,4 +153,4 @@ workbox.routing.registerRoute(
 
 // Required Workbox Precaching 2)
 workbox.precaching.cleanupOutdatedCaches()
-workbox.precaching.precacheAndRoute([{"revision":"a2f4c35190ec8e6fabe46138b9adfb0a","url":"android-chrome-192x192.png"},{"revision":"d03268467a9b4d25a81792c17f2204a8","url":"android-chrome-512x512.png"},{"revision":"771d7ef04f2e639138631efb400a2d09","url":"apple-touch-icon.png"},{"revision":"c5ed7a8c4f94cf7d3ab449f40e5f0bf7","url":"assets/admin.layout.58511dbb.js"},{"revision":"bb170a220078506e919a46b063ef2a2f","url":"assets/client.layout.035fda51.js"},{"revision":"23f9b7e3b75cb606ca50f5312c19a9e3","url":"assets/guest.about.d98a37f2.js"},{"revision":"3e546cf4e9eb2976af23463c65eda6cf","url":"assets/guest.blog.8e0ac823.js"},{"revision":"75f7cea695c9b0abc15d201e2edc5201","url":"assets/guest.contact.9e4f6118.js"},{"revision":"d744b9fd0c1a052d5c218b0a1adf5ae0","url":"assets/guest.login.9f9c7d44.js"},{"revision":"3985be6df606e72873032e667143bc7b","url":"assets/guest.service.a8923e62.js"},{"revision":"bfacec4bd17553afa14a2978fae6a051","url":"assets/index.2546fe19.js"},{"revision":"31d1a801f7134c420059132a1b2d43bf","url":"assets/index.d277bf68.css"},{"revision":"f18ee863a194f4872bc35b7359e0602c","url":"assets/record.update.454886fa.js"},{"revision":"29136d0829c5eb6a3d49afc34138a3a0","url":"assets/vendor.686b308e.js"},{"revision":"37d0f7f71b2fbebf3d42d4a7eb4071a6","url":"browserconfig.xml"},{"revision":"83a2877cb540b1f98787d6e874a9e52d","url":"favicon-16x16.png"},{"revision":"4091ecc36013862fc72fe8f71926ec4f","url":"favicon-32x32.png"},{"revision":"cd2ae4b5f8143cf077e942ba57a7910b","url":"favicon.ico"},{"revision":"20e11d01fdb9693c7cd27b137fe92908","url":"index.html"},{"revision":"41da3210e1a08cfd1bee1aa1a429b755","url":"manifest.webmanifest"},{"revision":"340777f19bb984a626adef7d41260f80","url":"mstile-150x150.png"},{"revision":"f77c87f977e0fcce05a6df46c885a129","url":"robots.txt"},{"revision":"3160eba834fda7b2ad8f03f81a231398","url":"safari-pinned-tab.svg"},{"revision":"5988440eb82bf82353127585dec11394","url":"site.webmanifest"},{"revision":"9b54c1e88eb43c57fdd0227f3bb03ecb","url":"workbox-b3e22772.js"}])
+workbox.precaching.precacheAndRoute([{"revision":"a2f4c35190ec8e6fabe46138b9adfb0a","url":"android-chrome-192x192.png"},{"revision":"d03268467a9b4d25a81792c17f2204a8","url":"android-chrome-512x512.png"},{"revision":"771d7ef04f2e639138631efb400a2d09","url":"apple-touch-icon.png"},{"revision":"82ef922d25bfa9ab29c5dbb26cc28485","url":"assets/admin.layout.7de03583.js"},{"revision":"c7a12da066f44664e722c9e270ae1723","url":"assets/client.layout.563f0b0b.js"},{"revision":"4871f2b4268a9ffe1dafafd2b319d775","url":"assets/guest.about.be9c9100.js"},{"revision":"7036b483a5aa7a742b6efaabb2fc529a","url":"assets/guest.blog.821cb4d0.js"},{"revision":"7902d8f225f6da4f3532ca9b6d6d2e4b","url":"assets/guest.contact.ba4d0e75.js"},{"revision":"dfb5f1ac56c79186aad77969738983dc","url":"assets/guest.login.f84343e3.js"},{"revision":"061ae566ef790e24dcd95ad4b879cb92","url":"assets/guest.service.5c2606d6.js"},{"revision":"d667fefbef795ba3efb63e07091bcc70","url":"assets/index.61e7883c.js"},{"revision":"31d1a801f7134c420059132a1b2d43bf","url":"assets/index.d277bf68.css"},{"revision":"f6003297b3309751484ac94547a3fd01","url":"assets/record.update.9ade2f00.js"},{"revision":"5411385b0d2b062e06a9d182b723e763","url":"assets/vendor.94faf113.js"},{"revision":"37d0f7f71b2fbebf3d42d4a7eb4071a6","url":"browserconfig.xml"},{"revision":"83a2877cb540b1f98787d6e874a9e52d","url":"favicon-16x16.png"},{"revision":"4091ecc36013862fc72fe8f71926ec4f","url":"favicon-32x32.png"},{"revision":"cd2ae4b5f8143cf077e942ba57a7910b","url":"favicon.ico"},{"revision":"47cb67594cfb37afaf8634d04389ad75","url":"index.html"},{"revision":"41da3210e1a08cfd1bee1aa1a429b755","url":"manifest.webmanifest"},{"revision":"340777f19bb984a626adef7d41260f80","url":"mstile-150x150.png"},{"revision":"f77c87f977e0fcce05a6df46c885a129","url":"robots.txt"},{"revision":"3160eba834fda7b2ad8f03f81a231398","url":"safari-pinned-tab.svg"},{"revision":"5988440eb82bf82353127585dec11394","url":"site.webmanifest"},{"revision":"9b54c1e88eb43c57fdd0227f3bb03ecb","url":"workbox-b3e22772.js"}])

@@ -1,5 +1,7 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import { Box, Button, Typography } from "@mui/material"
+import KeyboardReturnIcon from "@mui/icons-material/KeyboardReturn"
 import NightsStayIcon from "@mui/icons-material/NightsStay"
 import Brightness4Icon from "@mui/icons-material/Brightness4"
 
@@ -64,6 +66,12 @@ const DisplayMode = () => {
                </Button>
             </Box>
          </Box>
+         <Link to="/settings">
+            <Button sx={{ m: "10px", mb: "20px" }} variant="contained" color="primary">
+               <KeyboardReturnIcon fontSize="small" sx={{ mr: "10px" }} />
+               Back
+            </Button>
+         </Link>
       </>
    )
 }

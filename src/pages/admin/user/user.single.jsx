@@ -1,6 +1,6 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link, useParams } from "react-router-dom"
-import { Box, Button, Card, CardContent, CircularProgress, Container, Typography } from "@mui/material"
+import { Alert, Box, Button, Card, CardContent, CircularProgress, Container, Typography, Stack } from "@mui/material"
 import KeyboardReturnIcon from "@mui/icons-material/KeyboardReturn"
 import { useUserData } from "../../../hooks/admin/user/useUser.single"
 
@@ -8,8 +8,21 @@ const UserSingle = () => {
    const { id } = useParams()
    const { isLoading, isError, error, data, isFetching } = useUserData(id)
 
+   // If statement to handle fetched data
+   useEffect(() => {
+      if (data) {
+         // Removing alert boxes upon submission request
+         document.getElementById("user-single-error").style.display = "none"
+      }
+   }, [data])
+
    return (
       <>
+         <Stack sx={{ width: "100%" }}>
+            <Alert id="user-single-error" severity="error" style={{ display: "none" }}>
+               <strong id="user-single-error-message"></strong>
+            </Alert>
+         </Stack>
          <Typography sx={{ m: "10px" }} variant="h4">
             <strong>Client</strong>
          </Typography>

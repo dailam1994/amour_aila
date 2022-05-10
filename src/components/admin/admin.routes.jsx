@@ -13,6 +13,8 @@ import RecordDelete from "../../pages/admin/record/record.delete"
 import LogAll from "../../pages/admin/log/log.all"
 import LogDelete from "../../pages/admin/log/log.delete"
 import BlockipDelete from "../../pages/admin/blockip/blockip.delete"
+import WhitelistAll from "../../pages/admin/whitelist/whitelist.all"
+import WhitelistDelete from "../../pages/admin/whitelist/whitelist.delete"
 import DisplayMode from "../../pages/display/display.mode"
 import AdminTutorial from "../../pages/admin/admin.tutorial"
 
@@ -28,6 +30,8 @@ const AdminRoutes = () => {
             <Route path="blockip/delete" element={<BlockipDelete />} />
             <Route path="log/delete" element={<LogDelete />} />
             <Route path="log/all" element={<LogAll />} />
+            <Route path="whitelist/delete" element={<WhitelistDelete />} />
+            <Route path="whitelist/all" element={<WhitelistAll />} />
             <Route path="user/delete/:id" element={<UserDelete />} />
             <Route path="user/edit/:id" element={<UserEdit />} />
             <Route path="user/add" element={<UserAdd />} />

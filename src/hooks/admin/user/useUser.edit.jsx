@@ -24,6 +24,8 @@ const editUser = async (user) => {
                throw new Error("400 Status Code")
             case 401:
                throw new Error("401 Status Code")
+            case 404:
+               throw new Error("404 Status Code")
             case 429:
                throw new Error("429 Status Code")
             case 500:

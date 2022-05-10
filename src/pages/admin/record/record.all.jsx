@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import {
+   Alert,
    Box,
    Button,
    CircularProgress,
@@ -10,6 +11,7 @@ import {
    AccordionSummary,
    Grid,
    Typography,
+   Stack,
 } from "@mui/material"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import { useRecordAllData } from "../../../hooks/admin/record/useRecord.all"
@@ -18,6 +20,13 @@ const RecordAll = () => {
    const { isLoading, isError, error, data, isFetching } = useRecordAllData()
    let result
    let resultDate
+
+   useEffect(() => {
+      if (data) {
+         // Removing alert boxes upon submission request
+         document.getElementById("record-all-error").style.display = "none"
+      }
+   }, [data])
 
    if (data) {
       // Filtering through the data using the reduce method for user ID
@@ -41,6 +50,11 @@ const RecordAll = () => {
 
    return (
       <>
+         <Stack sx={{ width: "100%" }}>
+            <Alert id="record-all-error" severity="error" style={{ display: "none" }}>
+               <strong id="record-all-error-message"></strong>
+            </Alert>
+         </Stack>
          <Typography sx={{ m: "10px" }} variant="h4">
             <strong>ALL Records</strong>
          </Typography>

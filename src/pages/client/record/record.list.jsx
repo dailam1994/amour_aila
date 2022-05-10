@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import {
+   Alert,
    Box,
    Button,
    CircularProgress,
@@ -10,6 +11,7 @@ import {
    AccordionSummary,
    Grid,
    Typography,
+   Stack,
 } from "@mui/material"
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import { useSessionData } from "../../../hooks/client/useClient.session"
@@ -22,6 +24,9 @@ const RecordList = () => {
    const { data: sessionData } = useSessionData()
 
    useEffect(() => {
+      // Removing alert boxes upon submission request
+      document.getElementById("record-all-error").style.display = "none"
+
       if (sessionData) {
          setId(sessionData.user.userId)
       }
@@ -42,6 +47,11 @@ const RecordList = () => {
 
    return (
       <>
+         <Stack sx={{ width: "100%" }}>
+            <Alert id="record-all-error" severity="error" style={{ display: "none" }}>
+               <strong id="record-all-error-message"></strong>
+            </Alert>
+         </Stack>
          <Typography sx={{ m: "10px" }} variant="h4">
             <strong>My Records</strong>
          </Typography>

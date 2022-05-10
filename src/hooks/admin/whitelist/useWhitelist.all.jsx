@@ -1,20 +1,17 @@
-import { useMutation } from "react-query"
+import { useQuery } from "react-query"
 
-const updateRecord = async (record) => {
+const fetchWhitelist = async () => {
    // Delaying function
-   const delay = (ms = 4400) => new Promise((r) => setTimeout(r, ms))
+   const delay = (ms = 1100) => new Promise((r) => setTimeout(r, ms))
    await delay()
 
-   const id = record.recordID
-
-   // Fetch API PUT for record by ID
-   await fetch(`https://api.technolashes.com/api/record/${id}`, {
-      method: "PUT",
+   // Fetch API GET White Lists
+   const results = await fetch("https://api.technolashes.com/api/whitelists", {
+      method: "GET",
       headers: {
          "Content-Type": "application/json",
       },
       credentials: "include",
-      body: JSON.stringify(record),
    })
       .then((res) => {
          switch (res.status) {
@@ -33,22 +30,23 @@ const updateRecord = async (record) => {
          }
       })
       .then((json) => {
-         // If statment to handle success alert display and return of json data
+         // If statement to handle return json data
          if (json) {
-            document.getElementById("record-update-success").style.display = "flex"
             return json
          }
       })
       .catch((err) => {
-         // Handling error display alert
-         document.getElementById("record-update-error").style.display = "flex"
-         document.getElementById("record-update-error-message").innerHTML = err
+         // Handling error display alerts
+         document.getElementById("whitelist-all-error").style.display = "flex"
+         document.getElementById("white-all-error-message").innerHTML = err
          console.log(err)
       })
+
+   return results
 }
 
-export const useUpdateRecord = () => {
-   return useMutation("record-update", updateRecord, {
+export const useWhitelistAllData = () => {
+   return useQuery("whitelist-all", fetchWhitelist, {
       refetchOnWindowFocus: false,
    })
 }

@@ -35,6 +35,9 @@ const RecordUpdate = () => {
    const { isLoading, isFetching, isError, error, data } = useRecordData(id)
 
    useEffect(() => {
+      // Removing alert boxes upon submission request
+      document.getElementById("record-update-error").style.display = "none"
+
       // If statement to handle if data exist from useRecordData()
       if (data) {
          data.firstService == "true" ? setServiceOne(true) : setServiceOne(false)

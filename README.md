@@ -130,10 +130,8 @@ npm run preview "Running the application in production mode"
 
 -  New Entity
 
-   -  Admin
+   -  Admin & Client Record
       -  Read, Update and Delete Record
-   -  Client
-      -  Read, Create and Update Record
 
 -  Removed Entities
    -  Admin & Client
@@ -144,3 +142,13 @@ npm run preview "Running the application in production mode"
 (2022-05-08) [12:42]
 
 -  Admin & Client Help Tutorial
+
+(2022-05-10) [15:23]
+
+-  Updated Error Alerts w.r.t. A.P.I. Requests
+-  New Entity
+   -  Admin
+      -  IP Blocking
+         -  View, Create, Delete
+      -  Whitelisting IPs
+         -  View, Create, Delete

@@ -4,19 +4,19 @@ import { useForm } from "react-hook-form"
 import { Alert, Box, Button, FormControl, InputLabel, MenuItem, Typography, Select, Stack } from "@mui/material"
 import KeyboardReturnIcon from "@mui/icons-material/KeyboardReturn"
 import { errorInput, useStyles } from "../../guest/guest.login"
-import { useBlockipAllData } from "../../../hooks/admin/blockip/useBlockip.all"
-import { useDeleteBlockip } from "../../../hooks/admin/blockip/useBlockip.delete"
+import { useWhitelistAllData } from "../../../hooks/admin/whitelist/useWhitelist.all"
+import { useDeleteWhitelist } from "../../../hooks/admin/whitelist/useWhitelist.delete"
 
-const BlockipDelete = () => {
+const WhitelistDelete = () => {
    const classes = useStyles()
    const [value, setValue] = useState("")
 
-   const { data } = useBlockipAllData()
+   const { data } = useWhitelistAllData()
 
    useEffect(() => {
       if (data) {
          // Removing alert boxes upon submission request
-         document.getElementById("ip-delete-error").style.display = "none"
+         document.getElementById("whitelist-delete-error").style.display = "none"
       }
    }, [data])
 
@@ -26,13 +26,13 @@ const BlockipDelete = () => {
       formState: { errors },
    } = useForm()
 
-   const { mutate } = useDeleteBlockip()
+   const { mutate } = useDeleteWhitelist()
 
    // Function to handle form submission
    const onSubmit = (formData) => {
       // Reset alert displays
-      document.getElementById("ip-delete-success").style.display = "none"
-      document.getElementById("ip-delete-error").style.display = "none"
+      document.getElementById("whitelist-delete-success").style.display = "none"
+      document.getElementById("whitelist-delete-error").style.display = "none"
 
       mutate(formData)
    }
@@ -40,15 +40,15 @@ const BlockipDelete = () => {
    return (
       <>
          <Stack sx={{ width: "100%" }}>
-            <Alert id="ip-delete-error" severity="error" style={{ display: "none" }}>
-               <strong id="ip-delete-error-message"></strong>
+            <Alert id="whitelist-delete-error" severity="error" style={{ display: "none" }}>
+               <strong id="whitelist-delete-error-message"></strong>
             </Alert>
-            <Alert id="ip-delete-success" severity="success" style={{ display: "none" }}>
-               <strong>IP Unblocked Successfully!</strong>
+            <Alert id="whitelist-delete-success" severity="success" style={{ display: "none" }}>
+               <strong>White List Removed Successfully!</strong>
             </Alert>
          </Stack>
          <Typography sx={{ m: "10px" }} variant="h4">
-            <strong>Unblock IP Address</strong>
+            <strong>Remove White List</strong>
          </Typography>
          <form
             onSubmit={handleSubmit(onSubmit)}
@@ -94,15 +94,15 @@ const BlockipDelete = () => {
                }}>
                <Button
                   variant="contained"
-                  color="success"
+                  color="error"
                   type="submit"
                   sx={{ width: "50%" }}
                   style={{ textTransform: "none" }}>
-                  Unblock
+                  Remove
                </Button>
             </Box>
          </form>
-         <Link to="/log/all">
+         <Link to="/whitelist/all">
             <Button sx={{ m: "10px", mb: "20px" }} variant="contained" color="primary">
                <KeyboardReturnIcon fontSize="small" sx={{ mr: "10px" }} />
                Back
@@ -112,4 +112,4 @@ const BlockipDelete = () => {
    )
 }
 
-export default BlockipDelete
+export default WhitelistDelete

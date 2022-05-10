@@ -25,6 +25,9 @@ const UserEdit = () => {
 
    // If statement to handle fetched data
    useEffect(() => {
+      // Removing alert boxes upon submission request
+      document.getElementById("user-edit-error").style.display = "none"
+
       if (data) {
          setRoles(data.roles)
       }
