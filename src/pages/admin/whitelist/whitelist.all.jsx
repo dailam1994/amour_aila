@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { useForm } from "react-hook-form"
 import { Alert, Box, Button, CircularProgress, Container, TextField, Typography, Stack } from "@mui/material"
@@ -11,13 +11,14 @@ const WhitelistAll = () => {
    const classes = useStyles()
    const { isLoading, isError, error, data, isFetching } = useWhitelistAllData()
 
-   if (data) {
-      if (document.getElementById("whitelist-all-error")) {
-         // Removing alert boxes upon submission request
-         document.getElementById("whitelist-all-error").style.display = "none"
+   useEffect(() => {
+      if (data) {
+         if (document.getElementById("whitelist-all-error")) {
+            // Removing alert boxes upon submission request
+            document.getElementById("whitelist-all-error").style.display = "none"
+         }
       }
-      console.log(data)
-   }
+   }, [data])
 
    const {
       register,
