@@ -38,7 +38,7 @@ const fetchWhitelist = async () => {
       .catch((err) => {
          // Handling error display alerts
          document.getElementById("whitelist-all-error").style.display = "flex"
-         document.getElementById("white-all-error-message").innerHTML = err
+         document.getElementById("whitelist-all-error-message").innerHTML = err
          console.log(err)
       })
 
