@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useState, useEffect, useTransition } from "react"
 import { Link } from "react-router-dom"
 import {
    Alert,
@@ -13,6 +13,7 @@ import {
    TableContainer,
    TableHead,
    TableRow,
+   TextField,
    Typography,
    Stack,
 } from "@mui/material"
@@ -20,7 +21,16 @@ import KeyboardReturnIcon from "@mui/icons-material/KeyboardReturn"
 import { useUserAllData } from "../../../hooks/admin/user/useUser.all"
 
 const UserAll = () => {
+   const [value, setValue] = useState("")
+   const [query, setQuery] = useState("")
+   const [isPending, startTransition] = useTransition()
    const { isLoading, isError, error, data, isFetching } = useUserAllData()
+   let filteredNames
+
+   const searchHandler = (event) => {
+      setQuery(event.target.value)
+      startTransition(() => setValue(event.target.value))
+   }
 
    useEffect(() => {
       if (data) {
@@ -28,6 +38,13 @@ const UserAll = () => {
          document.getElementById("user-all-error").style.display = "none"
       }
    }, [data])
+
+   if (data) {
+      // Filtering through the data and returning firstName and lastName
+      filteredNames = data.filter((item) => {
+         return item.firstName.includes(value) || item.lastName.includes(value)
+      })
+   }
 
    return (
       <>
@@ -46,6 +63,16 @@ const UserAll = () => {
                </Button>
             </Link>
          </Container>
+         <Box sx={{ m: "10px" }} style={{ backgroundColor: "rgb(255,255,255)" }}>
+            <TextField
+               sx={{ width: 1 }}
+               variant="filled"
+               label="Search"
+               color="secondary"
+               value={query}
+               onChange={searchHandler}
+            />
+         </Box>
          <Box sx={{ m: "10px" }}>
             <TableContainer component={Paper} style={{ maxHeight: 373, overflow: "auto" }}>
                <Table aria-label="simple table">
@@ -57,7 +84,7 @@ const UserAll = () => {
                      </TableRow>
                   </TableHead>
                   <TableBody>
-                     {isLoading || isFetching ? (
+                     {isLoading || isPending || isFetching ? (
                         <TableRow sx={{ display: "flex", justifyContent: "center" }}>
                            <TableCell>
                               <CircularProgress color="secondary" />
@@ -69,8 +96,8 @@ const UserAll = () => {
                               <Typography style={{ color: "rgb(0,0,0)" }}>Error {error.message}</Typography>
                            </TableCell>
                         </TableRow>
-                     ) : data ? (
-                        data.map((item) => {
+                     ) : filteredNames ? (
+                        filteredNames.map((item) => {
                            return (
                               <TableRow
                                  sx={{

@@ -12,11 +12,11 @@ const AuthRoute = () => {
    const { isLoading, isFetching, data } = useAuthData()
    let user
 
-   // If statement to handle existing Authentication data
+   // If statement to handle existing Authentication Restriction data
    if (data) {
       user = { loggedIn: data.authenticated }
 
-      // If statement to handle data inside data object of Authentication data
+      // If statement to handle data inside data object of Authentication Restriction data
       if (data.user) {
          user = { loggedIn: data.authenticated, role: data.user.role }
       }

@@ -152,3 +152,10 @@ npm run preview "Running the application in production mode"
          -  View, Create, Delete
       -  Whitelisting IPs
          -  View, Create, Delete
+
+(2022-05-13) [01:36]
+
+-  Application Package Upgrade
+
+   -  React & React-dom -> @18
+   -  Admin User Search Feature
