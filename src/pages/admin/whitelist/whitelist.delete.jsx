@@ -17,6 +17,7 @@ const WhitelistDelete = () => {
       if (data) {
          // Removing alert boxes upon submission request
          document.getElementById("whitelist-delete-error").style.display = "none"
+         console.log(data)
       }
    }, [data])
 

@@ -1,7 +1,23 @@
 import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { useForm } from "react-hook-form"
-import { Alert, Box, Button, CircularProgress, Container, TextField, Typography, Stack } from "@mui/material"
+import {
+   Alert,
+   Box,
+   Button,
+   CircularProgress,
+   Container,
+   Paper,
+   Table,
+   TableBody,
+   TableCell,
+   TableContainer,
+   TableHead,
+   TableRow,
+   TextField,
+   Typography,
+   Stack,
+} from "@mui/material"
 import { errorInput, useStyles } from "../../guest/guest.login"
 import KeyboardReturnIcon from "@mui/icons-material/KeyboardReturn"
 import { useWhitelistAllData } from "../../../hooks/admin/whitelist/useWhitelist.all"
@@ -107,7 +123,7 @@ const WhitelistAll = () => {
                <Button
                   sx={{ width: "100%" }}
                   variant="contained"
-                  color="warning"
+                  color="error"
                   type="submit"
                   style={{ textTransform: "none" }}>
                   Remove
@@ -118,7 +134,79 @@ const WhitelistAll = () => {
             <strong>IPv4 Addresses</strong>
          </Typography>
          <Box sx={{ display: "flex", flexWrap: "wrap", m: "10px" }} style={{ maxHeight: 450, overflow: "auto" }}>
-            {isLoading || isFetching ? (
+            <TableContainer component={Paper} style={{ maxHeight: 373, overflow: "auto" }}>
+               <Table aria-label="simple table">
+                  <TableHead>
+                     <TableRow>
+                        <TableCell style={{ color: "rgb(0,0,0)" }}>
+                           <strong>Clients</strong>
+                        </TableCell>
+                     </TableRow>
+                  </TableHead>
+                  <TableBody>
+                     {isLoading || isFetching ? (
+                        <TableRow sx={{ display: "flex", justifyContent: "center" }}>
+                           <TableCell>
+                              <CircularProgress color="secondary" />
+                           </TableCell>
+                        </TableRow>
+                     ) : isError ? (
+                        <TableRow sx={{ display: "flex", justifyContent: "center" }}>
+                           <TableCell>
+                              <Typography style={{ color: "rgb(0,0,0)" }}>Error {error.message}</Typography>
+                           </TableCell>
+                        </TableRow>
+                     ) : data ? (
+                        data.map((item) => {
+                           return (
+                              <TableRow
+                                 sx={{
+                                    "&:last-child td, &:last-child th": {
+                                       border: 0,
+                                    },
+                                 }}
+                                 key={item.whitelistID}>
+                                 <TableCell
+                                    component="th"
+                                    scope="row"
+                                    sx={{
+                                       my: 0,
+                                       py: 0,
+                                       px: "5px",
+                                       textAlign: "center",
+                                    }}>
+                                    <Typography sx={{ m: "10px" }} variant="caption" key={item.ip}>
+                                       <strong>{item.ip}</strong>
+                                    </Typography>
+                                 </TableCell>
+                                 <TableCell
+                                    component="th"
+                                    scope="row"
+                                    sx={{
+                                       display: "flex",
+                                       justifyContent: "flex-end",
+                                       pr: "5px",
+                                       my: 0,
+                                       py: 0,
+                                    }}>
+                                    <Link to={`/whitelist/edit/${item.whitelistID}`}>
+                                       <Button
+                                          size="small"
+                                          variant="contained"
+                                          color="warning"
+                                          style={{ textTransform: "none" }}>
+                                          Edit
+                                       </Button>
+                                    </Link>
+                                 </TableCell>
+                              </TableRow>
+                           )
+                        })
+                     ) : null}
+                  </TableBody>
+               </Table>
+            </TableContainer>
+            {/* {isLoading || isFetching ? (
                <Container sx={{ display: "flex", justifyContent: "center", mt: 1 }}>
                   <Box>
                      <CircularProgress color="secondary" />
@@ -130,15 +218,8 @@ const WhitelistAll = () => {
                      <Typography style={{ color: "rgb(0,0,0)" }}>Error: {error.message}</Typography>
                   </Box>
                </Container>
-            ) : data ? (
-               data.map((item) => {
-                  return (
-                     <Typography sx={{ m: "10px" }} variant="caption" key={item.ip}>
-                        <strong>{item.ip}</strong>
-                     </Typography>
-                  )
-               })
-            ) : null}
+            ) : 
+            ) : null} */}
          </Box>
          <Link to="/settings">
             <Button sx={{ m: "10px", mb: "20px" }} variant="contained" color="primary">

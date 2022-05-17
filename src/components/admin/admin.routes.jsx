@@ -17,6 +17,7 @@ import WhitelistAll from "../../pages/admin/whitelist/whitelist.all"
 import WhitelistDelete from "../../pages/admin/whitelist/whitelist.delete"
 import DisplayMode from "../../pages/display/display.mode"
 import AdminTutorial from "../../pages/admin/admin.tutorial"
+import WhitelistEdit from "../../pages/admin/whitelist/whitelist.edit"
 
 const AdminRoutes = () => {
    return (
@@ -31,6 +32,7 @@ const AdminRoutes = () => {
             <Route path="log/delete" element={<LogDelete />} />
             <Route path="log/all" element={<LogAll />} />
             <Route path="whitelist/delete" element={<WhitelistDelete />} />
+            <Route path="whitelist/edit/:id" element={<WhitelistEdit />} />
             <Route path="whitelist/all" element={<WhitelistAll />} />
             <Route path="user/delete/:id" element={<UserDelete />} />
             <Route path="user/edit/:id" element={<UserEdit />} />
