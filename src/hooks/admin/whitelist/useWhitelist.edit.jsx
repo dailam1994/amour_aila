@@ -8,7 +8,7 @@ const editWhitelist = async (user) => {
    const id = user.userID
 
    // Fetch API PUT user by ID
-   const results = await fetch(`https://api1.technolashes.com/api/whitelist/${id}`, {
+   const results = await fetch(`http://localhost:3333/api/whitelist/${id}`, {
       method: "PUT",
       headers: {
          "Content-Type": "application/json",

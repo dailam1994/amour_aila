@@ -6,7 +6,7 @@ const addBlockip = async (ip) => {
    await delay()
 
    // Fetch API POST Block IP
-   await fetch("https://api1.technolashes.com/api/blockip", {
+   await fetch("http://localhost:3333/api/blockip", {
       method: "POST",
       headers: {
          "Content-Type": "application/json",

@@ -1,6 +1,16 @@
-# UX2 Implement Mobile App - AmourAila
+# UX3 Continuous Improvement Mobile App - AmourAila
 
--  Frontend Application for AmourAila Project
+-  Frontend Application Additions for AmourAila Project
+- Project provides an online web presence for the client and their customers.
+Client and Customers are allowed to login and interact with one another to 
+update their personal details that identifies who they are and for them to 
+also create records of their previous activities for future reference. This 
+helps admin and their employee to obtain information for each customer along 
+with what services they recieved previously to understand what services they
+should be doing afterwards. Therefore, this will allow employers and employee
+to have access to every client's record and have an understanding for the 
+next processes in regards to services with the business.
+- Requires backend application
 
 ```
 \/ \/ Commands below \/ \/
@@ -8,7 +18,7 @@ npm i "Installing all dependencies including development dependencies"
 npm run dev "Running the application in development mode"
 npm run build "Build the application from development mode"
 npm run preview "Running the application in production mode"
-
+workbox injectManijest "updated Service Worker to custom-SW"
 ```
 
 ## Multi-technology
@@ -18,6 +28,10 @@ npm run preview "Running the application in production mode"
 -  M.U.I.
 
 ### Additional Information
+
+-  React Form Hook
+-  React Query
+-  Moment (removed feature)
 
 ### Version Control
 
@@ -159,3 +173,16 @@ npm run preview "Running the application in production mode"
 
    -  React & React-dom -> @18
    -  Admin User Search Feature
+
+(2022-05-17) [13:19]
+
+-  Admin
+   -  Whitelist IPs
+      -  Edit
+
+(2022-05-17) [17:53]
+
+-  Client
+   -  Settings (Acknowledgements)
+      -  Class Component Extension (O.O.P. Methodology)
+-  Final rectifications

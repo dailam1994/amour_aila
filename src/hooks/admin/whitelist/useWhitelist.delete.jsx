@@ -9,7 +9,7 @@ const deleteWhitelist = async (data) => {
    const ip = data
 
    // Fetch API DELETE Whitelist by IP
-   await fetch("https://api1.technolashes.com/api/whitelist", {
+   await fetch("http://localhost:3333/api/whitelist", {
       method: "DELETE",
       headers: {
          "Content-Type": "application/json",

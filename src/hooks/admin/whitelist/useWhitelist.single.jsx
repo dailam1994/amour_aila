@@ -10,7 +10,7 @@ const fetchSingleWhitelist = async ({ queryKey }) => {
    // If statement to handle existing id
    if (id) {
       // Fetch API GET whitelist by ID
-      const results = await fetch(`https://api1.technolashes.com/api/whitelist/${id}`, {
+      const results = await fetch(`http://localhost:3333/api/whitelist/${id}`, {
          method: "GET",
          headers: {
             "Content-Type": "application/json",

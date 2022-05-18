@@ -4,6 +4,7 @@ import { Container, MenuItem, Typography } from "@mui/material"
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"
 import GroupIcon from "@mui/icons-material/Group"
 import SettingsBrightnessIcon from "@mui/icons-material/SettingsBrightness"
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents"
 
 const ClientSettings = () => {
    return (
@@ -30,6 +31,19 @@ const ClientSettings = () => {
                   <SettingsBrightnessIcon color="primary" />
                   <Typography sx={{ ml: "20px" }} aligh="center" color="primary">
                      Display Mode
+                  </Typography>
+                  <ArrowForwardIosIcon
+                     fontSize="small"
+                     color="primary"
+                     style={{ position: "absolute", right: "10px" }}
+                  />
+               </MenuItem>
+            </Link>
+            <Link to="/acknowledgement" style={{ margin: 0 }}>
+               <MenuItem>
+                  <EmojiEventsIcon color="primary" />
+                  <Typography sx={{ ml: "20px" }} aligh="center" color="primary">
+                     Acknowledgements
                   </Typography>
                   <ArrowForwardIosIcon
                      fontSize="small"

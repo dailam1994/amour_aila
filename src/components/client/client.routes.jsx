@@ -8,6 +8,7 @@ import RecordAdd from "../../pages/admin/record/record.add"
 import RecordUpdate from "../../pages/admin/record/record.update"
 import DisplayMode from "../../pages/display/display.mode"
 import ClientTutorial from "../../pages/client/client.tutorial"
+import Acknowledgement from "../../pages/client/client.acknowledgement"
 
 const AdminRoutes = () => {
    return (
@@ -20,6 +21,7 @@ const AdminRoutes = () => {
             <Route path="tutorial" element={<ClientTutorial />} />
             <Route path="user/edit" element={<UserEdit />} />
             <Route path="settings" element={<ClientSettings />} />
+            <Route path="acknowledgement" element={<Acknowledgement />} />
             <Route path="registered/home" element={<ClientHome />} />
             <Route path="/" element={<ClientHome />} />
          </Routes>

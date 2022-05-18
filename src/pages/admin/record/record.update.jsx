@@ -64,11 +64,11 @@ const RecordUpdate = () => {
 
       // If statement to handle at least one service input
       if (
-         formData.serviceOne == false &&
-         formData.serviceTwo == false &&
-         formData.serviceThree == false &&
-         formData.serviceFour == false &&
-         formData.serviceFive == false
+         serviceOne == false &&
+         serviceTwo == false &&
+         serviceThree == false &&
+         serviceFour == false &&
+         serviceFive == false
       ) {
          setServiceValidate(false)
          console.log("Need to pick one service")
@@ -86,7 +86,6 @@ const RecordUpdate = () => {
             fourthService: serviceFour,
             fifthService: serviceFive,
          }
-         console.log(record)
 
          mutate(record)
       }

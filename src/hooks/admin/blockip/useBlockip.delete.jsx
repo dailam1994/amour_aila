@@ -9,7 +9,7 @@ const deleteBlockip = async (data) => {
    const ip = data
 
    // Fetch API DELETE Blockip by IP
-   await fetch("https://api1.technolashes.com/api/blockip", {
+   await fetch("http://localhost:3333/api/blockip", {
       method: "DELETE",
       headers: {
          "Content-Type": "application/json",
